@@ -9,10 +9,14 @@ public class FourElementCombinations {
         int targetSum = 7;
 
         // Find and display all combinations of four elements whose sum equals the target sum
-        findFourElementCombinations(array, targetSum);
+        printStringList(findFourElementCombinations(array, targetSum));
     }
 
-    public static void findFourElementCombinations(int[] array, int targetSum) {
+    /**
+     * @param array - input
+     * @param targetSum - target Sum
+     */
+    private static List<String> findFourElementCombinations(int[] array, int targetSum) {
         int n = array.length;
         List<String> result = new ArrayList<>();
 
@@ -30,14 +34,17 @@ public class FourElementCombinations {
             }
         }
 
-
         if (!result.isEmpty()) {
-            System.out.println("Combinations of four elements whose sum is " + targetSum + ":");
-            for (String combination : result) {
-                System.out.println(combination);
-            }
+            System.out.println("Found combinations of four elements for sum " + targetSum);
         } else {
-            System.out.println("No combinations found with sum " + targetSum);
+            System.out.println("No combinations found for sum " + targetSum);
+        }
+        return result;
+    }
+
+    private static void printStringList(List<String> list) {
+        for (String e : list) {
+            System.out.println(e);
         }
     }
 }
