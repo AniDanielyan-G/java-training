@@ -1,4 +1,4 @@
-package line;
+package geometry;
 
 public class Line {
     private Point start;

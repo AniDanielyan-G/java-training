@@ -1,4 +1,4 @@
-package line;
+package geometry;
 
 public class Point {
     private double x;
@@ -39,6 +39,10 @@ public class Point {
         result[1] = y;
 
         return result;
+    }
+
+    public double distanceTo(Point other) {
+        return Math.sqrt(Math.pow(other.x - this.x, 2) + Math.pow(other.y - this.y, 2));
     }
 
     @Override

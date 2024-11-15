@@ -1,4 +1,4 @@
-package line;
+package geometry;
 
 public class LineDemo {
     public static void main(String[] args) {
